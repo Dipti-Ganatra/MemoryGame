@@ -2,7 +2,7 @@
 //  MemoryGameUITests.swift
 //  MemoryGameUITests
 //
-//  Created by Devang Nathwani on 13/07/17.
+//  Created by Dipti Ganatra on 13/07/17.
 //  Copyright © 2017 DND. All rights reserved.
 //
 

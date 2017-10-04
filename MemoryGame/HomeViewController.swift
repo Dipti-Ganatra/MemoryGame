@@ -1,14 +1,14 @@
 //
-//  ViewController.swift
+//  HomeViewController.swift
 //  MemoryGame
 //
-//  Created by Devang Nathwani on 13/07/17.
+//  Created by Dipti Ganatra on 13/07/17.
 //  Copyright © 2017 DND. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +19,9 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        UserDefaults.standard.set(segue.identifier, forKey: "level")
+    }
 }
 

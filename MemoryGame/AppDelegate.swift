@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  MemoryGame
 //
-//  Created by Devang Nathwani on 13/07/17.
+//  Created by Dipti Ganatra on 13/07/17.
 //  Copyright © 2017 DND. All rights reserved.
 //
 
@@ -13,9 +13,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    struct constants {
+        static let themeColor : UIColor = UIColor(red: 255.0/255.0, green: 102.0/255.0, blue: 102.0/255.0, alpha: 1)
+        static var highScoreEasy : String = "highScoreEasy"
+        static var highScoreMedium : String = "highScoreMedium"
+        static var highScoreHard : String = "highScoreHard"
+        
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if UserDefaults.standard.bool(forKey: "isNotFirst") == false {
+            UserDefaults.standard.set(true, forKey: "isNotFirst")
+            UserDefaults.standard.set("00:00", forKey: constants.highScoreEasy)
+            UserDefaults.standard.set("00:00", forKey: constants.highScoreMedium)
+            UserDefaults.standard.set("00:00", forKey: constants.highScoreHard)
+        }
+        
         return true
     }
 
